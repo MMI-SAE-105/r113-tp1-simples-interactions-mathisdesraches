@@ -13,22 +13,22 @@
   <p>Suivre les indications du fichier <code>README.md</code> (à faire dans la console)</p>
   <h1>Simples interactions</h1>
   <h2>Changer la couleur du texte</h2>
-  <p id="a-mettre-en-rouge">Paragraphe à mettre en rouge Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-    Corporis nesciunt corrupti natus quibusdam.</p>
+  <p id="a-mettre-en-rouge"><span style="color: red;">Paragraphe à mettre en rouge Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Corporis nesciunt corrupti natus quibusdam.</span></p>
   <ul>
-    <li><code>document.querySelector()</code></li>
+    <li><code>document.querySelector('h2')</code></li>
     <li><code>elm.style.color="red"</code></li>
   </ul>
   <h2>Réagir à un click</h2>
-  <button id="en-rouge-suite-a-click">En rouge suite à un click</button>
+  <button onclick="this.style.backgroundColor = 'red'; id=en-rouge-suite-a-click">En rouge suite à un click</button>
   <ul>
-    <li><code>elm.addEventListener()</code></li>
+    <li><code>elm.addEventListener('click',(evt)=>{ console.log(evt.target)})</code></li>
   </ul>
   <h1>Collections d'éléments</h1>
   <h2>Trouvez tous les 'H2' du document</h2>
   <p>Puis pour chacun, suite à un click, mettre la cible de l'événement en rouge</p>
   <ul>
-    <li><code>document.querySelectorAll()</code></li>
+    <li><code>document.querySelectorAll('h2')</code></li>
     <li><code>coll.forEach((elem)=>{/* ... */})</code></li>
     <li><code>elm.addEventListener('click',(evt)=>{ console.log(evt.target)})</code></li>
   </ul>
